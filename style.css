@@ -65,13 +65,13 @@ h1 {
 .road.east {
     right: 20px;
     top: 50%;
-    transform: translateY(-50%) rotate(90deg);
+    transform: translateY(-50%) rotate(0deg);
 }
 
 .road.west {
     left: 20px;
     top: 50%;
-    transform: translateY(-50%) rotate(-90deg);
+    transform: translateY(-50%) rotate(-180deg);
 }
 
 .traffic-light {
