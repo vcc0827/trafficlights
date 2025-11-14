@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>交通灯交叉路口系统</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>交通灯交叉路口系统</h1>
+        <div class="intersection">
+            <!-- 道路线条 -->
+            <div class="road-line vertical"></div>
+            <div class="road-line horizontal"></div>
+            <div class="center-mark"></div>
+            
+            <!-- 北向道路 -->
+            <div class="road north">
+                <div class="traffic-light" id="north-light">
+                    <div class="light red"></div>
+                    <div class="light yellow"></div>
+                    <div class="light green"></div>
+                </div>
+            </div>
+            
+            <!-- 南向道路 -->
+            <div class="road south">
+                <div class="traffic-light" id="south-light">
+                    <div class="light red"></div>
+                    <div class="light yellow"></div>
+                    <div class="light green"></div>
+                </div>
+            </div>
+            
+            <!-- 东向道路 -->
+            <div class="road east">
+                <div class="traffic-light" id="east-light">
+                    <div class="light red"></div>
+                    <div class="light yellow"></div>
+                    <div class="light green"></div>
+                </div>
+            </div>
+            
+            <!-- 西向道路 -->
+            <div class="road west">
+                <div class="traffic-light" id="west-light">
+                    <div class="light red"></div>
+                    <div class="light yellow"></div>
+                    <div class="light green"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <p>控制台命令：</p>
+            <ul>
+                <li><code>intersection.changeToGreen()</code> - 切换到绿色</li>
+                <li><code>intersection.changeToYellow()</code> - 切换到黄色（3秒）</li>
+                <li><code>intersection.changeToRed()</code> - 切换到红色</li>
+                <li><code>intersection.nextState()</code> - 切换到下一个状态</li>
+                <li><code>intersection.startAutoMode()</code> - 启动自动模式</li>
+                <li><code>intersection.stopAutoMode()</code> - 停止自动模式</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script src="traffic-light.js"></script>
+</body>
+</html>
+

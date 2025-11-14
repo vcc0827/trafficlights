@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.intersection {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    margin: 0 auto 30px;
+    background: #2c3e50;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.road {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.road.north {
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%) rotate(90deg);
+}
+
+.road.south {
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-90deg);
+}
+
+.road.east {
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+}
+
+.road.west {
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+}
+
+.traffic-light {
+    width: 80px;
+    height: 200px;
+    background: #1a1a1a;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
+}
+
+.light {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #333;
+    border: 3px solid #555;
+    transition: all 0.3s ease;
+}
+
+.light.red.active {
+    background: #ff4444;
+    box-shadow: 0 0 20px #ff4444, 0 0 40px #ff4444;
+    border-color: #ff6666;
+}
+
+.light.yellow.active {
+    background: #ffaa00;
+    box-shadow: 0 0 20px #ffaa00, 0 0 40px #ffaa00;
+    border-color: #ffcc44;
+}
+
+.light.green.active {
+    background: #44ff44;
+    box-shadow: 0 0 20px #44ff44, 0 0 40px #44ff44;
+    border-color: #66ff66;
+}
+
+.road-label {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* 为旋转的道路标签添加反向旋转，使文字保持正常方向 */
+.road.north .road-label {
+    transform: rotate(-90deg);
+    display: inline-block;
+}
+
+.road.south .road-label {
+    transform: rotate(90deg);
+    display: inline-block;
+}
+
+.road.east .road-label {
+    transform: rotate(-90deg);
+    display: inline-block;
+}
+
+.road.west .road-label {
+    transform: rotate(90deg);
+    display: inline-block;
+}
+
+.controls {
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.controls p {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.controls ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.controls li {
+    margin: 8px 0;
+    padding: 8px;
+    background: white;
+    border-radius: 5px;
+    border-left: 4px solid #667eea;
+}
+
+.controls code {
+    background: #e8e8e8;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+    color: #d63384;
+}
+
