@@ -213,6 +213,7 @@ class Intersection {
 
 // 创建交叉路口实例（全局变量，方便在控制台调用）
 const intersection = new Intersection();
+intersection.startAutoMode();
 
 // 在控制台输出使用说明
 console.log('%c交通灯交叉路口系统已加载！', 'color: #667eea; font-size: 16px; font-weight: bold;');
